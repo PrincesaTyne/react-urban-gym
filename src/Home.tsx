@@ -1,10 +1,9 @@
 import React from 'react'
 import ImageCard from './ImageCard'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import ButtonGroup from '@material-ui/core/ButtonGroup'
 import { makeStyles } from '@material-ui/core/styles'
-import { AppBar, Toolbar, Grid, Container } from '@material-ui/core'
+import Grid from '@material-ui/core/Grid'
+import Header from './Header'
+import Footer from './Footer'
 
 const workouts = [
   {
@@ -56,21 +55,7 @@ const Home: React.FC = () => {
 
   return(
     <div>
-      <AppBar position='static' >
-        <Toolbar variant='regular'>
-          <Typography variant='h3' color='inherit'>
-            URBAN GYM
-          </Typography>
-          <ButtonGroup variant='text' color='inherit' >
-            <Button>Workouts</Button>
-            <Button>Instructors</Button>
-          </ButtonGroup>
-          <ButtonGroup className={classes.loginButton} variant='text' color='inherit'>
-            <Button>LOGIN</Button>
-            <Button>SIGNUP</Button>
-          </ButtonGroup>
-        </Toolbar>
-      </AppBar>
+      <Header />
       <div style={{
         backgroundImage: `url('../images/gym3.jpeg')`,
         backgroundSize: "cover",
@@ -89,15 +74,7 @@ const Home: React.FC = () => {
           )
         )}
       </Grid>
-      <AppBar position="static" color="primary">
-          <Container maxWidth="md">
-            <Toolbar>
-              <Typography color="inherit">
-                © 2019 Urban Gym
-              </Typography>
-            </Toolbar>
-          </Container>
-        </AppBar>
+      <Footer />
     </div>
   )
 }
