@@ -2,8 +2,6 @@ import React from 'react'
 import ImageCard from './ImageCard'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Header from './Header'
-import Footer from './Footer'
 
 const workouts = [
   {
@@ -55,7 +53,6 @@ const Home: React.FC = () => {
 
   return(
     <div>
-      <Header />
       <div style={{
         backgroundImage: `url('../images/gym3.jpeg')`,
         backgroundSize: "cover",
@@ -74,7 +71,6 @@ const Home: React.FC = () => {
           )
         )}
       </Grid>
-      <Footer />
     </div>
   )
 }

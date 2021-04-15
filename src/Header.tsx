@@ -23,12 +23,12 @@ const Header: React.FC = () => {
             URBAN GYM
           </Typography>
           <ButtonGroup variant='text' color='inherit' >
-            <Button>Workouts</Button>
-            <Button>Instructors</Button>
+            <Button href='./workouts'>Workouts</Button>
+            <Button href='./instructors'>Instructors</Button>
           </ButtonGroup>
           <ButtonGroup className={classes.loginButton} variant='text' color='inherit'>
-            <Button>LOGIN</Button>
-            <Button>SIGNUP</Button>
+            <Button href='./login'>LOGIN</Button>
+            <Button href='./signup'>SIGNUP</Button>
           </ButtonGroup>
         </Toolbar>
       </AppBar>
