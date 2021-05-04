@@ -51,7 +51,7 @@ const Signup: React.FC = () => {
       email: Yup.string().email('Invalid email address').required('Please fill out this field'),
       password1: Yup.string()
                     .min(8, 'Password should have 8 or more characters')
-                    // .matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,20}\S$/, 'Password should have one uppercase, one lowercase, one special character and no spaces')
+                    .matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,20}\S$/, 'Password should contain an uppercase and a special character or number')
                     .required('Please fill out this field'),
       password2: Yup.string()
                     .required('Re-enter Password')
@@ -96,7 +96,6 @@ const Signup: React.FC = () => {
       <Box padding={3} className={classes.componentSpacing} mx='auto'>
         <Typography variant='h4' color='primary'>
           URBAN-GYM SIGNUP FORM
-          {/* Urban-gym Signup form */}
         </Typography>
       </Box>
       <form onSubmit={formik.handleSubmit}>

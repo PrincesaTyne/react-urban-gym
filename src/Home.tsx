@@ -2,6 +2,7 @@ import React from 'react'
 import ImageCard from './ImageCard'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
+import { Container } from '@material-ui/core'
 
 const workouts = [
   {
@@ -42,8 +43,9 @@ const useStyles = makeStyles({
   },
   cardContainer: {
     justifyContent: 'center',
-    marginLeft: 1,
-    marginRight: 1
+    margin: 0
+    // marginLeft: 1,
+    // marginRight: 1
   }
 })
 
@@ -52,13 +54,13 @@ const Home: React.FC = () => {
   const classes = useStyles()
 
   return(
-    <div>
+    <Container>
       <div style={{
         backgroundImage: `url('../images/gym3.jpeg')`,
         backgroundSize: "cover",
         height: 300,
         color: "#f5f5f5",
-        margin: 20
+        // margin: 20
         }} 
       >
       </div>
@@ -71,7 +73,7 @@ const Home: React.FC = () => {
           )
         )}
       </Grid>
-    </div>
+    </Container>
   )
 }
 
